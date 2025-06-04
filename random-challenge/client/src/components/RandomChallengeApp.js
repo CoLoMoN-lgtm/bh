@@ -19,7 +19,7 @@ const RandomChallengeApp = () => {
   });
 
   // Базовий URL API
-  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API_URL = process.env.REACT_APP_API_URL || 'https://bh-wlay.onrender.com/api';
 
   const { user } = useAuth(); // Змінено з currentUser на user
   const [completedChallenges, setCompletedChallenges] = useState([]);
