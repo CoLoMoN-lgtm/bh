@@ -9,7 +9,7 @@
     },
     "scripts": {
         "build": "npm install",
-        "start": "npm start",
+        "start": "node server.js",
         "seed": "node scripts/seed-mongodb.js",
         "postinstall": "echo 'Dependencies installed successfully'",
         "test": "echo \"Error: no test specified\" && exit 1"
