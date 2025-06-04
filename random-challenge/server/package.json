@@ -8,8 +8,8 @@
         "npm": ">=8.0.0"
     },
     "scripts": {
-        "build": "cd random-challenge/server && npm install",
-        "start": "cd random-challenge/server && npm start",
+        "build": "npm install",
+        "start": "npm start",
         "seed": "node scripts/seed-mongodb.js",
         "postinstall": "echo 'Dependencies installed successfully'",
         "test": "echo \"Error: no test specified\" && exit 1"
