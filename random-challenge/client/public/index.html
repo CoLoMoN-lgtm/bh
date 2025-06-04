@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Випадковий виклик - додаток для несподіваних маленьких пригод"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Випадковий виклик</title>
+  </head>
+  <body>
+    <noscript>Вам потрібно увімкнути JavaScript для запуску цього додатку.</noscript>
+    
+    <!-- Фільтр консолі для розробки -->
+    <script>
+      // Приховуємо надмірні Firebase offline повідомлення в розробці
+      const originalError = console.error;
+      console.error = function(...args) {
+        const message = args.join(' ');
+        if (message.includes('WebChannelConnection RPC') || 
+            message.includes('transport errored') ||
+            message.includes('ERR_ABORTED 400')) {
+          return;
+        }
+        originalError.apply(console, args);
+      };
+    </script>
+    
+    <div id="root"></div>
+  </body>
+</html>
